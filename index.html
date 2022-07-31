@@ -586,7 +586,27 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
 <button type="button" class="modal-btm" data-modal-close><svg class="x-icon-btm" width="18" height="18"><use href="./images/icons.svg#Cross"></use></svg></button>
-    </div>
+<form name="order-servis" autocomplete="on" novalidate>
+  <h1 class="modal-header" >Оставьте свои данные, мы вам перезвоним</h1>
+  <label class="line-name" >
+    Имя
+  <input class="write-here" type="text" id="name" placeholder="John Doy" > 
+  </label> 
+  <label class="line-name">Телефон
+  <input class="write-here" type="tel" id="telephone" placeholder="+380">
+</label>
+  <label class="line-name">Почта
+  <input class="write-here" type="email" placeholder="еmail@example.com"></label>
+  <label>Комментарий
+  <input class="write-here" type="textarea">
+</label>
+  <label class="line-name">
+    <input class="write-here" type="checkbox" value="agree">
+    Соглашаюсь с рассылкой и принимаю Условия договора
+  </label> 
+  <button type="submit" class="Submit-btn">Отправить</button>
+</form>
+</div>  
   </div>
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
