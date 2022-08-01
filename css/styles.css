@@ -847,6 +847,7 @@ a {
 }
 
 .modal {
+  padding: 40px;
   position: relative;
   width: 528px;
   height: 581px;
@@ -880,7 +881,8 @@ a {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-header{width: 448px;
+.modal-header{ display: block;
+  width: 448px;
   height: 23px;
   left: 576px;
   top: 261px;
@@ -893,11 +895,36 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   
-  color: #212121;}
+  color: #212121;
+margin-bottom: 12px;
+}
 
-  .write-here{ display:flex;}
- .line-name{display: flex; ;}
-
+.contract{ text-decoration: underline; color: var(--active-button-color);}
+.form-register{display: block; margin-bottom: 20px; text-align: center;}
+.register-form-agree{display: flex; margin-bottom: 30px; align-content: center; justify-content: center; }
+.submit-btn{ display:inline-flex; align-items: center; justify-content: center; padding: 10px 56px; min-width: 200px;
+  min-height: 50px ; background: #2196F3; color: white;
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+cursor: pointer;}
+.submit-btn:hover{background: #188ce8;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+  .modal-form{ display:block; text-align: center;}
+  .write-here{padding: 10px; width: 100%;
+  padding-left: 42px; border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px; cursor: pointer;}
+  .modal-comment{padding: 16px;}
+  .register-form-wrap{display: block; position: relative;
+  margin-bottom: 28px;}
+  .register-form-wrap:last-child{margin-bottom: 0;}
+.modal-icon{position: absolute; left: 12px; bottom: 9px;}
+.line-name{ display:flex;align-items: left; margin-bottom: 4px;}
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
