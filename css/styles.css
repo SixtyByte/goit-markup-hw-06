@@ -849,8 +849,8 @@ a {
 .modal {
   padding: 40px;
   position: relative;
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
   background-color: white;
   border-radius: 4px;
   z-index: 1000;
@@ -899,9 +899,9 @@ a {
 margin-bottom: 12px;
 }
 
-.contract{ text-decoration: underline; color: var(--active-button-color);}
+.contract{ text-decoration: underline; color: var(--active-button-color); text-underline-position: under;}
 .form-register{display: block; margin-bottom: 20px; text-align: center;}
-.register-form-agree{display: flex; margin-bottom: 30px; align-content: center; justify-content: center; }
+.register-form-agree{display: flex; margin-bottom: 30px; align-content: center; justify-content: center; gap: 8px;}
 .submit-btn{ display:inline-flex; align-items: center; justify-content: center; padding: 10px 56px; min-width: 200px;
   min-height: 50px ; background: #2196F3; color: white;
   border: transparent;
@@ -916,19 +916,75 @@ cursor: pointer;}
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
   .modal-form{ display:block; text-align: center;}
-  .write-here{padding: 10px; width: 100%;
+  .write-here {padding: 10px; width: 100%;
   padding-left: 42px; border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px; cursor: pointer;}
-  .modal-comment{padding: 16px;}
+  .write-here:hover{ border-color: var(--active-button-color);}
+  .write-here:focus{border-color: var(--active-button-color);}
+  .write-here:not(:placeholder-shown){border-color: #188ce8;}
+  
+.modal-icon{fill: currentColor;}
+  .modal-comment{padding: 16px; min-width: 448px; min-height: 120px ; resize: none;}
   .register-form-wrap{display: block; position: relative;
   margin-bottom: 28px;}
   .register-form-wrap:last-child{margin-bottom: 0;}
 .modal-icon{position: absolute; left: 12px; bottom: 9px;}
-.line-name{ display:flex;align-items: left; margin-bottom: 4px;}
+.line-name{ display:flex;align-items: left; margin-bottom: 4px; font-family: 'Roboto';
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  
+  letter-spacing: 0.01em;
+  
+  color: #757575;}
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+.modal-icon{fill: currentColor;}
+.register-form-wrap:hover{border-color: #188ce8; color: #188ce8;}
+.register-form-wrap:focus{border-color: #188ce8; color: #188ce8;}
+.check{opacity: 0; transition: opacity,250ms; }
+.write-checkbox:checked + .agreeicon .uncheck{opacity: 0;}
+.write-checkbox:checked + .agreeicon .check{opacity: 1;}
+.write-checkbox{opacity: 0;}
+.agree-point{user-select: none;}
 
-/*End 
+/**
+  |============================
+  | Subscribe
+  |============================
+*/
+.subscribe-header{font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;}
+  .email-subscribe{margin-top: 20px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px; min-width: 356px; min-height: 50px; padding-left: 16px; color: white;} 
+    
+    .subscribe-btm{ display: inline-flex; align-items: center;  justify-content: center; min-width: 200px;
+      min-height: 50px; background: #2196F3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px; color:white;
+    margin-left: 12px;}
+      
+     .subscribe-btm:hover {
+      background: #188ce8;
+      transition: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+  .telegram-icon{margin-left: 10px;}
+      
